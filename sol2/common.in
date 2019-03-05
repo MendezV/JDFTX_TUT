@@ -1,0 +1,8 @@
+#Save the following to common.in:
+lattice face-centered Cubic 10.263
+ion-species GBRV/$ID_pbe.uspp
+elec-cutoff 20 100
+
+ion Si 0.00 0.00 0.00  0
+ion Si 0.25 0.25 0.25  0
+

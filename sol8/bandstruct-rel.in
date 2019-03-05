@@ -1,0 +1,7 @@
+#Save the following to bandstruct-rel.in
+include common-rel.in
+include bandstruct.kpoints
+fix-electron-density totalE-rel.$VAR
+elec-n-bands 18                               #Spinorial: twice as many bands
+dump End BandEigs
+dump-name bandstruct-rel.$VAR

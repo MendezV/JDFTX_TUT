@@ -1,0 +1,6 @@
+lattice Cubic 15
+coulomb-interaction Isolated
+coulomb-truncation-embed 0 0 0
+ion-species GBRV/$ID_pbe.uspp
+elec-cutoff 20 100
+coords-type cartesian  

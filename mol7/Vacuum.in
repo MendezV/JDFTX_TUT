@@ -1,0 +1,8 @@
+#Save to Vacuum.in and run as jdftx -i Vacuum.in | tee Vacuum.out:
+include common.in
+ion O   0.00 0.00  0.00  0
+ion H   0.00 1.13 +1.45  1
+ion H   0.00 1.13 -1.45  1
+ionic-minimize nIterations 10
+dump-name Vacuum.$VAR
+dump End State

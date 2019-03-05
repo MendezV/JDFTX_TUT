@@ -1,0 +1,17 @@
+lattice Cubic 10  #Alternate to explicitly specifying lattice vectors
+elec-cutoff 20 100
+ion-species GBRV/h_pbe.uspp
+ion-species GBRV/o_pbe.uspp
+coords-type cartesian     
+ion O   0.00 0.00  0.00  0
+ion H   0.00 1.13 +1.45  1
+ion H   0.00 1.13 -1.45  1
+
+dump-name water.$VAR              #Filename pattern for outputs
+
+#Outputs every few electronic steps:
+dump Electronic State        #The first parameter is when to dump, the remaining are what
+dump-interval Electronic 5   #How often to dump; this requests every 5 electronic steps
+
+#Output at the end:
+dump End Ecomponents ElecDensity EigStats Vscloc Dtot RealSpaceWfns

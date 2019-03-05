@@ -1,0 +1,491 @@
+
+*************** JDFTx 1.4.2  ***************
+
+Start date and time: Sun Mar  3 22:19:05 2019
+Executable jdftx with command-line: -i Vacuum.in
+Running on hosts (process indices):  Juans-MBP.lan1 (0)
+Divided in process groups (process indices):  0 (0)
+Resource initialization completed at t[s]:      0.00
+Run totals: 1 processes, 12 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Cartesian
+core-overlap-check vector
+coulomb-interaction Isolated
+coulomb-truncation-embed 0 0 0
+davidson-band-ratio 1.1
+dump End State
+dump-name Vacuum.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+exchange-regularization None
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42
+forces-output-coords Positions
+ion O   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion H   0.000000000000000   1.130000000000000   1.450000000000000 1
+ion H   0.000000000000000   1.130000000000000  -1.450000000000000 1
+ion-species GBRV/$ID_pbe.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          10 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 1 1 1 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice Cubic 15
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.001
+pcm-variant GLSSA13
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 48 point-group symmetries of the bravais lattice
+Found 4 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[         15          0          0  ]
+[          0         15          0  ]
+[          0          0         15  ]
+unit cell volume = 3375
+G =
+[   0.418879          0          0  ]
+[          0   0.418879          0  ]
+[          0          0   0.418879  ]
+Minimum fftbox size, Smin = [  68  68  68  ]
+Chosen fftbox size, S = [  70  70  70  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[         15          0          0  ]
+[          0         15          0  ]
+[          0          0         15  ]
+unit cell volume = 3375
+G =
+[   0.418879          0          0  ]
+[          0   0.418879          0  ]
+[          0          0   0.418879  ]
+Minimum fftbox size, Smin = [  64  64  64  ]
+Chosen fftbox size, S = [  64  64  64  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/Users/juanmendezvalderrama/Documents/JDFTX/build/pseudopotentials/GBRV/o_pbe.uspp':
+  Title: O.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -15.894388.  6 valence electrons in orbitals:
+    |200>  occupation: 2  eigenvalue: -0.878823
+    |210>  occupation: 4  eigenvalue: -0.332131
+  lMax: 2  lLocal: 2  QijEcut: 6
+  5 projectors sampled on a log grid with 511 points:
+    l: 0  eig: -0.878823  rCut: 1.25
+    l: 0  eig: 0.000000  rCut: 1.25
+    l: 1  eig: -0.332132  rCut: 1.25
+    l: 1  eig: 0.000000  rCut: 1.25
+    l: 2  eig: 1.000000  rCut: 1.25
+  Partial core density with radius 0.7
+  Transforming core density to a uniform radial grid of dG=0.02 with 1275 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1275 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1275 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.25 bohrs.
+
+Reading pseudopotential file '/Users/juanmendezvalderrama/Documents/JDFTX/build/pseudopotentials/GBRV/h_pbe.uspp':
+  Title: H.  Created by USPP 7.3.6 on 2-4-15
+  Reference state energy: -0.458849.  1 valence electrons in orbitals:
+    |100>  occupation: 1  eigenvalue: -0.238595
+  lMax: 0  lLocal: 1  QijEcut: 6
+  2 projectors sampled on a log grid with 395 points:
+    l: 0  eig: -0.238595  rCut: 1.2
+    l: 0  eig: 1.000000  rCut: 1.2
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1275 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1275 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.20 bohrs.
+
+Initialized 2 species with 3 total atoms.
+
+Folded 1 k-points by 1x1x1 to 1 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+No reducable k-points. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons:   8.000000   nBands: 4   nStates: 1
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 14363.000 , ideal nbasis = 14418.257
+
+---------- Setting up coulomb interaction ----------
+Setting up double-sized grid for truncated Coulomb potentials:
+R = 
+[         30          0          0  ]
+[          0         30          0  ]
+[          0          0         30  ]
+unit cell volume = 27000
+G =
+[    0.20944          0          0  ]
+[          0    0.20944          0  ]
+[          0          0    0.20944  ]
+Chosen fftbox size, S = [  140  140  140  ]
+Integer grid location selected as the embedding center:
+   Grid: [  0  0  0  ]
+   Lattice: [  0  0  0  ]
+   Cartesian: [  0  0  0  ]
+Constructing Wigner-Seitz cell: 6 faces (6 quadrilaterals, 0 hexagons)
+Range-separation parameter for embedded mesh potentials due to point charges: 0.583992 bohrs.
+Constructing Wigner-Seitz cell: 6 faces (6 quadrilaterals, 0 hexagons)
+Gaussian width for range separation: 1.58054 bohrs.
+FFT grid for long-range part: [ 140 140 140 ].
+Planning fourier transform ... Done.
+Computing truncated long-range part in real space ... Done.
+Adding short-range part in reciprocal space ... Done.
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+O pseudo-atom occupations:   s ( 2 )  p ( 4 )
+H pseudo-atom occupations:   s ( 1 )
+	FillingsUpdate:  mu: -0.000000000  nElectrons: 8.000000
+LCAOMinimize: Iter:   0  Etot: -17.0479602216895856  |grad|_K:  7.291e-02  alpha:  1.000e+00
+	FillingsUpdate:  mu: -0.000000000  nElectrons: 8.000000
+LCAOMinimize: Iter:   1  Etot: -17.1179567064789850  |grad|_K:  6.005e-03  alpha:  4.673e-01  linmin: -4.698e-01  cgtest:  7.528e-01  t[s]:      6.18
+LCAOMinimize: Encountered beta<0, resetting CG.
+	FillingsUpdate:  mu: -0.000000000  nElectrons: 8.000000
+LCAOMinimize: Iter:   2  Etot: -17.1184829474250293  |grad|_K:  1.796e-03  alpha:  6.007e-01  linmin:  3.298e-02  cgtest: -1.168e-01  t[s]:      6.88
+	FillingsUpdate:  mu: -0.000000000  nElectrons: 8.000000
+LCAOMinimize: Iter:   3  Etot: -17.1185364418772075  |grad|_K:  3.132e-04  alpha:  7.032e-01  linmin: -3.175e-03  cgtest:  4.279e-01  t[s]:      7.48
+LCAOMinimize: Encountered beta<0, resetting CG.
+LCAOMinimize: None of the convergence criteria satisfied after 3 iterations.
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+   Truncated Coulomb potentials:
+      R. Sundararaman and T.A. Arias, Phys. Rev. B 87, 165122 (2013)
+
+   Total energy minimization:
+      T.A. Arias, M.C. Payne and J.D. Joannopoulos, Phys. Rev. Lett. 69, 1077 (1992)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:      7.48
+
+
+-------- Electronic minimization -----------
+ElecMinimize: Iter:   0  Etot: -17.118536441877222  |grad|_K:  1.910e-03  alpha:  1.000e+00
+ElecMinimize: Iter:   1  Etot: -17.242406553614749  |grad|_K:  6.519e-04  alpha:  5.879e-01  linmin: -1.635e-02  t[s]:      9.05
+ElecMinimize: Iter:   2  Etot: -17.259587485140607  |grad|_K:  3.934e-04  alpha:  6.973e-01  linmin: -7.283e-03  t[s]:      9.91
+ElecMinimize: Iter:   3  Etot: -17.265692830816040  |grad|_K:  2.048e-04  alpha:  6.817e-01  linmin:  3.796e-03  t[s]:     10.75
+ElecMinimize: Iter:   4  Etot: -17.267489089050315  |grad|_K:  9.661e-05  alpha:  7.478e-01  linmin: -2.111e-03  t[s]:     11.31
+ElecMinimize: Iter:   5  Etot: -17.267962094476893  |grad|_K:  5.298e-05  alpha:  8.811e-01  linmin:  2.977e-03  t[s]:     11.87
+ElecMinimize: Iter:   6  Etot: -17.268096934551984  |grad|_K:  3.301e-05  alpha:  8.383e-01  linmin: -7.050e-04  t[s]:     12.43
+ElecMinimize: Iter:   7  Etot: -17.268146765254784  |grad|_K:  1.939e-05  alpha:  7.954e-01  linmin:  4.332e-04  t[s]:     13.12
+ElecMinimize: Iter:   8  Etot: -17.268161645666876  |grad|_K:  9.743e-06  alpha:  6.891e-01  linmin: -2.563e-04  t[s]:     13.92
+ElecMinimize: Iter:   9  Etot: -17.268165362153677  |grad|_K:  4.976e-06  alpha:  6.813e-01  linmin:  9.622e-05  t[s]:     14.73
+ElecMinimize: Iter:  10  Etot: -17.268166477525298  |grad|_K:  2.450e-06  alpha:  7.841e-01  linmin: -1.333e-04  t[s]:     15.36
+ElecMinimize: Iter:  11  Etot: -17.268166761953786  |grad|_K:  1.228e-06  alpha:  8.248e-01  linmin:  2.294e-05  t[s]:     16.14
+ElecMinimize: Iter:  12  Etot: -17.268166825161522  |grad|_K:  6.283e-07  alpha:  7.295e-01  linmin: -1.367e-05  t[s]:     17.00
+ElecMinimize: Iter:  13  Etot: -17.268166840979482  |grad|_K:  3.583e-07  alpha:  6.975e-01  linmin:  3.462e-06  t[s]:     17.76
+ElecMinimize: Iter:  14  Etot: -17.268166846094825  |grad|_K:  1.785e-07  alpha:  6.935e-01  linmin:  9.986e-05  t[s]:     18.57
+ElecMinimize: Iter:  15  Etot: -17.268166847473829  |grad|_K:  8.452e-08  alpha:  7.536e-01  linmin: -2.139e-04  t[s]:     19.36
+ElecMinimize: Converged (|Delta Etot|<1.000000e-08 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in cartesian coordinates:
+ion O   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion H   0.000000000000000   1.130000000000000   1.450000000000000 1
+ion H   0.000000000000000   1.130000000000000  -1.450000000000000 1
+
+
+# Forces in Cartesian coordinates:
+force O   0.000000000000000  -0.008778932872423   0.000000000000000 0
+force H   0.000000000000000   0.004400885096558   0.005214862531460 1
+force H   0.000000000000000   0.004400885096558  -0.005214862531460 1
+
+# Energy components:
+   Eewald =        6.8725465139032904
+       EH =       21.3265728155629191
+     Eloc =      -51.7604133118020542
+      Enl =        2.2274500183217905
+      Exc =       -4.3453742191933920
+ Exc_core =        0.0650489777314032
+       KE =        8.3460023580022149
+-------------------------------------
+     Etot =      -17.2681668474738288
+
+IonicMinimize: Iter:   0  Etot: -17.268166847473829  |grad|_K:  3.940e-03  t[s]:     19.87
+
+#--- Lowdin population analysis ---
+# oxidation-state O -0.738
+# oxidation-state H +0.427 +0.427
+
+
+-------- Electronic minimization -----------
+ElecMinimize: Iter:   0  Etot: -17.268220552869337  |grad|_K:  1.982e-05  alpha:  1.000e+00
+ElecMinimize: Iter:   1  Etot: -17.268232334847838  |grad|_K:  6.646e-06  alpha:  5.218e-01  linmin: -1.857e-04  t[s]:     21.99
+ElecMinimize: Iter:   2  Etot: -17.268233682943467  |grad|_K:  3.418e-06  alpha:  5.312e-01  linmin: -9.153e-06  t[s]:     22.97
+ElecMinimize: Iter:   3  Etot: -17.268234303825814  |grad|_K:  1.963e-06  alpha:  9.251e-01  linmin:  9.095e-05  t[s]:     23.65
+ElecMinimize: Iter:   4  Etot: -17.268234495571193  |grad|_K:  1.057e-06  alpha:  8.658e-01  linmin: -1.453e-05  t[s]:     24.31
+ElecMinimize: Iter:   5  Etot: -17.268234550694324  |grad|_K:  5.614e-07  alpha:  8.591e-01  linmin:  8.181e-06  t[s]:     25.17
+ElecMinimize: Iter:   6  Etot: -17.268234565042416  |grad|_K:  2.952e-07  alpha:  7.924e-01  linmin: -2.416e-06  t[s]:     25.96
+ElecMinimize: Iter:   7  Etot: -17.268234569334762  |grad|_K:  1.536e-07  alpha:  8.576e-01  linmin: -4.292e-05  t[s]:     26.78
+ElecMinimize: Iter:   8  Etot: -17.268234570510231  |grad|_K:  7.571e-08  alpha:  8.670e-01  linmin: -4.131e-04  t[s]:     27.51
+ElecMinimize: Converged (|Delta Etot|<1.000000e-08 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in cartesian coordinates:
+ion O   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion H   0.000000000000000   1.134400885096558   1.455214862531460 1
+ion H   0.000000000000000   1.134400885096558  -1.455214862531460 1
+
+
+# Forces in Cartesian coordinates:
+force O   0.000000000000000  -0.004526686651876   0.000000000000000 0
+force H   0.000000000000000   0.002275550122307   0.002160320781033 1
+force H   0.000000000000000   0.002275550122307  -0.002160320781033 1
+
+# Energy components:
+   Eewald =        6.8471882084751066
+       EH =       21.3066568129737313
+     Eloc =      -51.7094129300680834
+      Enl =        2.2263347279640562
+      Exc =       -4.3420642434603716
+ Exc_core =        0.0650489777314032
+       KE =        8.3380138758739246
+-------------------------------------
+     Etot =      -17.2682345705102307
+
+IonicMinimize: Iter:   1  Etot: -17.268234570510231  |grad|_K:  1.812e-03  alpha:  1.000e+00  linmin: -6.958e-01  t[s]:     27.81
+
+#--- Lowdin population analysis ---
+# oxidation-state O -0.736
+# oxidation-state H +0.425 +0.425
+
+
+-------- Electronic minimization -----------
+ElecMinimize: Iter:   0  Etot: -17.268243714554778  |grad|_K:  1.707e-05  alpha:  1.000e+00
+ElecMinimize: Iter:   1  Etot: -17.268252506596696  |grad|_K:  5.829e-06  alpha:  5.252e-01  linmin: -1.554e-04  t[s]:     29.05
+ElecMinimize: Iter:   2  Etot: -17.268253549414776  |grad|_K:  3.026e-06  alpha:  5.342e-01  linmin: -8.698e-06  t[s]:     29.59
+ElecMinimize: Iter:   3  Etot: -17.268254037389266  |grad|_K:  1.685e-06  alpha:  9.274e-01  linmin:  7.878e-05  t[s]:     30.13
+ElecMinimize: Iter:   4  Etot: -17.268254179667668  |grad|_K:  9.095e-07  alpha:  8.721e-01  linmin: -1.064e-05  t[s]:     30.66
+ElecMinimize: Iter:   5  Etot: -17.268254221081769  |grad|_K:  4.884e-07  alpha:  8.714e-01  linmin:  2.299e-06  t[s]:     31.19
+ElecMinimize: Iter:   6  Etot: -17.268254232115716  |grad|_K:  2.588e-07  alpha:  8.050e-01  linmin:  1.528e-05  t[s]:     31.71
+ElecMinimize: Iter:   7  Etot: -17.268254235365156  |grad|_K:  1.338e-07  alpha:  8.445e-01  linmin: -7.834e-05  t[s]:     32.22
+ElecMinimize: Iter:   8  Etot: -17.268254236251430  |grad|_K:  6.638e-08  alpha:  8.615e-01  linmin: -4.413e-04  t[s]:     32.75
+ElecMinimize: Converged (|Delta Etot|<1.000000e-08 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in cartesian coordinates:
+ion O   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion H   0.000000000000000   1.139063622847579   1.458937296803993 1
+ion H   0.000000000000000   1.139063622847579  -1.458937296803993 1
+
+
+# Forces in Cartesian coordinates:
+force O   0.000000000000000  -0.000886973074969   0.000000000000000 0
+force H   0.000000000000000   0.000454506166489  -0.000280659225072 1
+force H   0.000000000000000   0.000454506166489   0.000280659225072 1
+
+# Energy components:
+   Eewald =        6.8259216407613348
+       EH =       21.2898172764881473
+     Eloc =      -51.6664466880995121
+      Enl =        2.2253670467479636
+      Exc =       -4.3392709794556952
+ Exc_core =        0.0650489777314032
+       KE =        8.3313084895749316
+-------------------------------------
+     Etot =      -17.2682542362514297
+
+IonicMinimize: Iter:   2  Etot: -17.268254236251430  |grad|_K:  3.084e-04  alpha:  1.000e+00  linmin: -2.186e-01  t[s]:     33.03
+
+#--- Lowdin population analysis ---
+# oxidation-state O -0.734
+# oxidation-state H +0.424 +0.424
+
+
+-------- Electronic minimization -----------
+ElecMinimize: Iter:   0  Etot: -17.268255045192276  |grad|_K:  2.764e-06  alpha:  1.000e+00
+ElecMinimize: Iter:   1  Etot: -17.268255286413758  |grad|_K:  7.304e-07  alpha:  5.496e-01  linmin: -2.219e-05  t[s]:     34.19
+ElecMinimize: Iter:   2  Etot: -17.268255303610523  |grad|_K:  4.016e-07  alpha:  5.611e-01  linmin:  1.602e-05  t[s]:     34.73
+ElecMinimize: Iter:   3  Etot: -17.268255310472799  |grad|_K:  1.993e-07  alpha:  7.407e-01  linmin:  2.371e-05  t[s]:     35.25
+ElecMinimize: Iter:   4  Etot: -17.268255312222255  |grad|_K:  9.981e-08  alpha:  7.669e-01  linmin:  1.838e-04  t[s]:     35.75
+ElecMinimize: Converged (|Delta Etot|<1.000000e-08 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in cartesian coordinates:
+ion O   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion H   0.000000000000000   1.140180962755007   1.458543923019544 1
+ion H   0.000000000000000   1.140180962755007  -1.458543923019544 1
+
+
+# Forces in Cartesian coordinates:
+force O   0.000000000000000  -0.000548537787412   0.000000000000000 0
+force H   0.000000000000000   0.000284190122145  -0.000356927770743 1
+force H   0.000000000000000   0.000284190122145   0.000356927770743 1
+
+# Energy components:
+   Eewald =        6.8246907328438304
+       EH =       21.2887626392907769
+     Eloc =      -51.6638532271584197
+      Enl =        2.2252751830672559
+      Exc =       -4.3390963204761128
+ Exc_core =        0.0650489777314032
+       KE =        8.3309167024790085
+-------------------------------------
+     Etot =      -17.2682553122222551
+
+IonicMinimize: Iter:   3  Etot: -17.268255312222255  |grad|_K:  2.634e-04  alpha:  1.000e+00  linmin: -6.456e-01  t[s]:     36.03
+
+#--- Lowdin population analysis ---
+# oxidation-state O -0.734
+# oxidation-state H +0.424 +0.424
+
+
+-------- Electronic minimization -----------
+ElecMinimize: Iter:   0  Etot: -17.268253763564203  |grad|_K:  1.044e-05  alpha:  1.000e+00
+ElecMinimize: Iter:   1  Etot: -17.268257209156943  |grad|_K:  2.262e-06  alpha:  5.507e-01  linmin: -6.571e-05  t[s]:     37.18
+ElecMinimize: Iter:   2  Etot: -17.268257391418551  |grad|_K:  1.184e-06  alpha:  6.201e-01  linmin: -1.997e-05  t[s]:     37.65
+ElecMinimize: Iter:   3  Etot: -17.268257445685038  |grad|_K:  6.229e-07  alpha:  6.737e-01  linmin:  1.580e-05  t[s]:     38.07
+ElecMinimize: Iter:   4  Etot: -17.268257460600068  |grad|_K:  2.905e-07  alpha:  6.691e-01  linmin: -1.674e-05  t[s]:     38.50
+ElecMinimize: Iter:   5  Etot: -17.268257464493992  |grad|_K:  1.390e-07  alpha:  8.031e-01  linmin:  2.213e-05  t[s]:     38.92
+ElecMinimize: Iter:   6  Etot: -17.268257465402918  |grad|_K:  7.459e-08  alpha:  8.191e-01  linmin: -3.403e-04  t[s]:     39.34
+ElecMinimize: Converged (|Delta Etot|<1.000000e-08 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in cartesian coordinates:
+ion O   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion H   0.000000000000000   1.144014359619677   1.455987875884337 1
+ion H   0.000000000000000   1.144014359619677  -1.455987875884337 1
+
+
+# Forces in Cartesian coordinates:
+force O   0.000000000000000   0.000108780537215   0.000000000000000 0
+force H   0.000000000000000  -0.000052254171228  -0.000137066025080 1
+force H   0.000000000000000  -0.000052254171228   0.000137066025080 1
+
+# Energy components:
+   Eewald =        6.8240574182747462
+       EH =       21.2878741065167674
+     Eloc =      -51.6620322439723836
+      Enl =        2.2250628739973251
+      Exc =       -4.3389505681356280
+ Exc_core =        0.0650489777314032
+       KE =        8.3306819701848500
+-------------------------------------
+     Etot =      -17.2682574654029182
+
+IonicMinimize: Iter:   4  Etot: -17.268257465402918  |grad|_K:  8.469e-05  alpha:  1.000e+00  linmin: -1.966e-01  t[s]:     39.58
+IonicMinimize: Converged (|grad|_K<1.000000e-04).
+
+#--- Lowdin population analysis ---
+# oxidation-state O -0.733
+# oxidation-state H +0.424 +0.424
+
+
+Dumping 'Vacuum.wfns' ... done
+Dumping 'Vacuum.ionpos' ... done
+End date and time: Sun Mar  3 22:19:45 2019  (Duration: 0-0:00:39.60)
+Done!

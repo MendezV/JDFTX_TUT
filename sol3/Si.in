@@ -1,0 +1,17 @@
+#Save to Si.in and run "mpirun -n 4 jdftx -i Si.in"
+lattice face-centered Cubic 10.263
+ion-species GBRV/$ID_pbe.uspp
+elec-cutoff 20 100
+
+ion Si 0.00 0.00 0.00  0
+ion Si 0.25 0.25 0.25  0
+
+kpoint-folding 12 12 12     #Use a Brillouin zone mesh
+electronic-SCF              #Perform a Self-Consistent Field optimization
+dump-name Si.$VAR
+dump End None
+
+elec-n-bands 10             #Si has 4 occupied bands; asking for 6 unoccupied bands
+converge-empty-states yes   #Make sure that empty state eigenvalues are reliable
+
+density-of-states Total     #Output total density-of-states

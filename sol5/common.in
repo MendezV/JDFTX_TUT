@@ -1,0 +1,6 @@
+#Save the following to common.in:
+lattice face-centered Cubic 7.41
+ion-species GBRV/$ID_pbesol.uspp
+elec-ex-corr gga-PBEsol
+elec-cutoff 20 100
+ion Pt  0 0 0  0      #Single atom per unit cell

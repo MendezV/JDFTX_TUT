@@ -1,0 +1,9 @@
+include common.in
+initial-state H2.$VAR
+dump End None
+vibrations \
+    dr 0.01 \
+    centralDiff yes \
+    translationSym yes \
+    rotationSym yes \
+    T 298

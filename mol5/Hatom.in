@@ -1,0 +1,16 @@
+lattice Cubic 15
+ion H 0 0 0  1
+
+coulomb-interaction Isolated
+coulomb-truncation-embed 0 0 0
+
+elec-ex-corr Hartree-Fock
+
+ion-species SG15/$ID_ONCV_PBE.upf
+elec-cutoff 30
+
+spintype z-spin                     #z-spin = up/dn polarization (non-relativistic spin)
+elec-initial-magnetization +1 yes   #yes = hold magnetization fixed, no = optimize it
+
+dump End BandEigs
+dump-name Hatom.$VAR

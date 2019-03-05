@@ -1,0 +1,11 @@
+#Save to LinearPCM.in and run as jdftx -i LinearPCM.in | tee LinearPCM.out:
+include common.in
+include Vacuum.ionpos
+initial-state Vacuum.$VAR
+ionic-minimize nIterations 10
+dump-name LinearPCM.$VAR
+dump End State BoundCharge
+
+fluid LinearPCM     #Simple continuum fluid with linear response
+pcm-variant GLSSA13 #default, if not specified
+fluid-solvent H2O   #Solvent is water

@@ -1,0 +1,22 @@
+#Save the following to FeO.in:
+lattice face-centered Cubic 8.16
+latt-scale 1 1 2.01             #Slightly break symmetry
+kpoint-folding 6 6 3
+
+ion Fe 0.0 0.0 0.00  0
+ion Fe 0.0 0.0 0.50  0
+ion O  0.5 0.5 0.25  0
+ion O  0.5 0.5 0.75  0
+
+ion-species GBRV/$ID_pbe.uspp
+elec-cutoff 20 100
+elec-smearing Fermi 0.01
+electronic-SCF
+
+spintype z-spin
+initial-magnetic-moments Fe +5 -5
+add-U Fe d 0.158
+
+dump End None
+density-of-states Total
+dump-name PBE+U.$VAR

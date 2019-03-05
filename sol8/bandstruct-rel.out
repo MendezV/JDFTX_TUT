@@ -1,0 +1,740 @@
+
+*************** JDFTx 1.4.2  ***************
+
+Start date and time: Mon Mar  4 20:44:57 2019
+Executable jdftx with command-line: -i bandstruct-rel.in
+Running on hosts (process indices):  Juans-MBP.lan1 (0-3)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)
+Resource initialization completed at t[s]:      0.00
+Run totals: 4 processes, 12 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End BandEigs
+dump-name bandstruct-rel.$VAR
+elec-cutoff 20 200
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-n-bands 18
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fix-electron-density totalE-rel.$VAR
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42
+forces-output-coords Positions
+ion Pt   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion-species Pt.rel-pbe-n-rrkjus_psl.0.1.UPF
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  0.01449275362319
+kpoint   0.000000000000   0.033333333333   0.033333333333  0.01449275362319
+kpoint   0.000000000000   0.066666666667   0.066666666667  0.01449275362319
+kpoint   0.000000000000   0.100000000000   0.100000000000  0.01449275362319
+kpoint   0.000000000000   0.133333333333   0.133333333333  0.01449275362319
+kpoint   0.000000000000   0.166666666667   0.166666666667  0.01449275362319
+kpoint   0.000000000000   0.200000000000   0.200000000000  0.01449275362319
+kpoint   0.000000000000   0.233333333333   0.233333333333  0.01449275362319
+kpoint   0.000000000000   0.266666666667   0.266666666667  0.01449275362319
+kpoint   0.000000000000   0.300000000000   0.300000000000  0.01449275362319
+kpoint   0.000000000000   0.333333333333   0.333333333333  0.01449275362319
+kpoint   0.000000000000   0.366666666667   0.366666666667  0.01449275362319
+kpoint   0.000000000000   0.400000000000   0.400000000000  0.01449275362319
+kpoint   0.000000000000   0.433333333333   0.433333333333  0.01449275362319
+kpoint   0.000000000000   0.466666666667   0.466666666667  0.01449275362319
+kpoint   0.000000000000   0.500000000000   0.500000000000  0.01449275362319
+kpoint   0.031250000000   0.531250000000   0.500000000000  0.01449275362319
+kpoint   0.062500000000   0.562500000000   0.500000000000  0.01449275362319
+kpoint   0.093750000000   0.593750000000   0.500000000000  0.01449275362319
+kpoint   0.125000000000   0.625000000000   0.500000000000  0.01449275362319
+kpoint   0.156250000000   0.656250000000   0.500000000000  0.01449275362319
+kpoint   0.187500000000   0.687500000000   0.500000000000  0.01449275362319
+kpoint   0.218750000000   0.718750000000   0.500000000000  0.01449275362319
+kpoint   0.250000000000   0.750000000000   0.500000000000  0.01449275362319
+kpoint   0.281250000000   0.718750000000   0.500000000000  0.01449275362319
+kpoint   0.312500000000   0.687500000000   0.500000000000  0.01449275362319
+kpoint   0.343750000000   0.656250000000   0.500000000000  0.01449275362319
+kpoint   0.375000000000   0.625000000000   0.500000000000  0.01449275362319
+kpoint   0.406250000000   0.593750000000   0.500000000000  0.01449275362319
+kpoint   0.437500000000   0.562500000000   0.500000000000  0.01449275362319
+kpoint   0.468750000000   0.531250000000   0.500000000000  0.01449275362319
+kpoint   0.500000000000   0.500000000000   0.500000000000  0.01449275362319
+kpoint   0.472222222222   0.472222222222   0.472222222222  0.01449275362319
+kpoint   0.444444444444   0.444444444444   0.444444444444  0.01449275362319
+kpoint   0.416666666667   0.416666666667   0.416666666667  0.01449275362319
+kpoint   0.388888888889   0.388888888889   0.388888888889  0.01449275362319
+kpoint   0.361111111111   0.361111111111   0.361111111111  0.01449275362319
+kpoint   0.333333333333   0.333333333333   0.333333333333  0.01449275362319
+kpoint   0.305555555556   0.305555555556   0.305555555556  0.01449275362319
+kpoint   0.277777777778   0.277777777778   0.277777777778  0.01449275362319
+kpoint   0.250000000000   0.250000000000   0.250000000000  0.01449275362319
+kpoint   0.222222222222   0.222222222222   0.222222222222  0.01449275362319
+kpoint   0.194444444444   0.194444444444   0.194444444444  0.01449275362319
+kpoint   0.166666666667   0.166666666667   0.166666666667  0.01449275362319
+kpoint   0.138888888889   0.138888888889   0.138888888889  0.01449275362319
+kpoint   0.111111111111   0.111111111111   0.111111111111  0.01449275362319
+kpoint   0.083333333333   0.083333333333   0.083333333333  0.01449275362319
+kpoint   0.055555555556   0.055555555556   0.055555555556  0.01449275362319
+kpoint   0.027777777778   0.027777777778   0.027777777778  0.01449275362319
+kpoint   0.000000000000   0.000000000000   0.000000000000  0.01449275362319
+kpoint   0.019736842105   0.039473684211   0.019736842105  0.01449275362319
+kpoint   0.039473684211   0.078947368421   0.039473684211  0.01449275362319
+kpoint   0.059210526316   0.118421052632   0.059210526316  0.01449275362319
+kpoint   0.078947368421   0.157894736842   0.078947368421  0.01449275362319
+kpoint   0.098684210526   0.197368421053   0.098684210526  0.01449275362319
+kpoint   0.118421052632   0.236842105263   0.118421052632  0.01449275362319
+kpoint   0.138157894737   0.276315789474   0.138157894737  0.01449275362319
+kpoint   0.157894736842   0.315789473684   0.157894736842  0.01449275362319
+kpoint   0.177631578947   0.355263157895   0.177631578947  0.01449275362319
+kpoint   0.197368421053   0.394736842105   0.197368421053  0.01449275362319
+kpoint   0.217105263158   0.434210526316   0.217105263158  0.01449275362319
+kpoint   0.236842105263   0.473684210526   0.236842105263  0.01449275362319
+kpoint   0.256578947368   0.513157894737   0.256578947368  0.01449275362319
+kpoint   0.276315789474   0.552631578947   0.276315789474  0.01449275362319
+kpoint   0.296052631579   0.592105263158   0.296052631579  0.01449275362319
+kpoint   0.315789473684   0.631578947368   0.315789473684  0.01449275362319
+kpoint   0.335526315789   0.671052631579   0.335526315789  0.01449275362319
+kpoint   0.355263157895   0.710526315789   0.355263157895  0.01449275362319
+kpoint   0.375000000000   0.750000000000   0.375000000000  0.01449275362319
+kpoint-folding 1 1 1 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice Face-Centered Cubic 7.41
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.001
+pcm-variant GLSSA13
+spintype spin-orbit
+subspace-rotation-factor 1 yes
+symmetries none
+symmetry-threshold 0.0001
+
+
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[          0      3.705      3.705  ]
+[      3.705          0      3.705  ]
+[      3.705      3.705          0  ]
+unit cell volume = 101.717
+G =
+[  -0.847933   0.847933   0.847933  ]
+[   0.847933  -0.847933   0.847933  ]
+[   0.847933   0.847933  -0.847933  ]
+Minimum fftbox size, Smin = [  36  36  36  ]
+Chosen fftbox size, S = [  36  36  36  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[          0      3.705      3.705  ]
+[      3.705          0      3.705  ]
+[      3.705      3.705          0  ]
+unit cell volume = 101.717
+G =
+[  -0.847933   0.847933   0.847933  ]
+[   0.847933  -0.847933   0.847933  ]
+[   0.847933   0.847933  -0.847933  ]
+Minimum fftbox size, Smin = [  24  24  24  ]
+Chosen fftbox size, S = [  24  24  24  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file 'Pt.rel-pbe-n-rrkjus_psl.0.1.UPF':
+  'Pt' pseudopotential, 'PBE' functional
+  Generated using "atomic" code by A. Dal Corso  v.5.0.2 svn rev. 9415
+  Author: ADC  Date: 11Sep2012.
+  10 valence electrons, 5 orbitals, 10 projectors, 1277 radial grid points, with lMax = 2
+  Transforming core density to a uniform radial grid of dG=0.02 with 2537 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 2537 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 2537 points.
+    6S    l: 0   occupation:  1.0   eigenvalue: -0.208010
+    6P    l: 1   occupation:  0.0   eigenvalue: -0.044402
+    6P    l: 1   occupation:  0.0   eigenvalue: -0.026860
+    5D    l: 2   occupation:  4.0   eigenvalue: -0.254495
+    5D    l: 2   occupation:  5.0   eigenvalue: -0.205823
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  WARNING: large normalization error in atomic orbital 1p (integral: 0.985433).
+  WARNING: large normalization error in atomic orbital 1d (integral: 1.686818).
+  WARNING: large normalization error in atomic orbital 2d (integral: 1.743208).
+  Core radius for overlap checks: 2.47 bohrs.
+
+Initialized 1 species with 1 total atoms.
+
+Folded 69 k-points by 1x1x1 to 69 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+No reducable k-points. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons:  10.000000   nBands: 18   nStates: 69
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 434.130 , ideal nbasis = 434.544
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 1.888820 bohr.
+Real space sum over 2197 unit cells with max indices [  6  6  6  ]
+Reciprocal space sum over 2197 terms with max indices [  6  6  6  ]
+
+---------- Allocating electronic variables ----------
+Reading "n" from file 'totalE-rel.n' ... done
+Initializing wave functions:  linear combination of atomic orbitals
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Total energy minimization:
+      T.A. Arias, M.C. Payne and J.D. Joannopoulos, Phys. Rev. Lett. 69, 1077 (1992)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:      1.51
+
+
+----------- Band structure minimization -------------
+Minimization will be done independently for each quantum number.
+
+---- Minimization of quantum number:     0  [ +0.0000000 +0.0000000 +0.0000000 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.270081170588180
+BandDavidson: Iter:   1  Eband: +0.217192537260331  dEband: -5.288863e-02  t[s]:      1.54
+BandDavidson: Iter:   2  Eband: +0.209518011266767  dEband: -7.674526e-03  t[s]:      1.56
+BandDavidson: Iter:   3  Eband: +0.208711439496037  dEband: -8.065718e-04  t[s]:      1.58
+BandDavidson: Iter:   4  Eband: +0.208424087921471  dEband: -2.873516e-04  t[s]:      1.59
+BandDavidson: Iter:   5  Eband: +0.208356972521186  dEband: -6.711540e-05  t[s]:      1.61
+BandDavidson: Iter:   6  Eband: +0.208346968147184  dEband: -1.000437e-05  t[s]:      1.62
+BandDavidson: Iter:   7  Eband: +0.208344678875999  dEband: -2.289271e-06  t[s]:      1.64
+BandDavidson: Iter:   8  Eband: +0.208343781946841  dEband: -8.969292e-07  t[s]:      1.65
+BandDavidson: Iter:   9  Eband: +0.208343350023433  dEband: -4.319234e-07  t[s]:      1.66
+BandDavidson: Iter:  10  Eband: +0.208343136655930  dEband: -2.133675e-07  t[s]:      1.68
+BandDavidson: Iter:  11  Eband: +0.208343026241872  dEband: -1.104141e-07  t[s]:      1.69
+BandDavidson: Iter:  12  Eband: +0.208342969313990  dEband: -5.692788e-08  t[s]:      1.70
+BandDavidson: Iter:  13  Eband: +0.208342939235008  dEband: -3.007898e-08  t[s]:      1.72
+BandDavidson: Iter:  14  Eband: +0.208342918043107  dEband: -2.119190e-08  t[s]:      1.73
+BandDavidson: Iter:  15  Eband: +0.208342893223615  dEband: -2.481949e-08  t[s]:      1.74
+BandDavidson: Iter:  16  Eband: +0.208342847970605  dEband: -4.525301e-08  t[s]:      1.75
+BandDavidson: Iter:  17  Eband: +0.208342732705927  dEband: -1.152647e-07  t[s]:      1.76
+BandDavidson: Iter:  18  Eband: +0.208342355009653  dEband: -3.776963e-07  t[s]:      1.77
+BandDavidson: Iter:  19  Eband: +0.208339789589217  dEband: -2.565420e-06  t[s]:      1.78
+BandDavidson: Iter:  20  Eband: +0.207183793857738  dEband: -1.155996e-03  t[s]:      1.79
+BandDavidson: Iter:  21  Eband: +0.206161613902763  dEband: -1.022180e-03  t[s]:      1.79
+BandDavidson: Iter:  22  Eband: +0.205820036231609  dEband: -3.415777e-04  t[s]:      1.80
+BandDavidson: Iter:  23  Eband: +0.205706729159144  dEband: -1.133071e-04  t[s]:      1.81
+BandDavidson: Iter:  24  Eband: +0.205665038357075  dEband: -4.169080e-05  t[s]:      1.82
+BandDavidson: Iter:  25  Eband: +0.205648198448362  dEband: -1.683991e-05  t[s]:      1.82
+BandDavidson: Iter:  26  Eband: +0.205640833924414  dEband: -7.364524e-06  t[s]:      1.83
+BandDavidson: Iter:  27  Eband: +0.205637239115202  dEband: -3.594809e-06  t[s]:      1.84
+BandDavidson: Iter:  28  Eband: +0.205635392210292  dEband: -1.846905e-06  t[s]:      1.85
+BandDavidson: Iter:  29  Eband: +0.205634363174003  dEband: -1.029036e-06  t[s]:      1.85
+BandDavidson: Iter:  30  Eband: +0.205633743309061  dEband: -6.198649e-07  t[s]:      1.86
+BandDavidson: Iter:  31  Eband: +0.205633346695558  dEband: -3.966135e-07  t[s]:      1.87
+BandDavidson: Iter:  32  Eband: +0.205633084947865  dEband: -2.617477e-07  t[s]:      1.87
+BandDavidson: Iter:  33  Eband: +0.205632907009776  dEband: -1.779381e-07  t[s]:      1.88
+BandDavidson: Iter:  34  Eband: +0.205632785060610  dEband: -1.219492e-07  t[s]:      1.89
+BandDavidson: Iter:  35  Eband: +0.205632702485579  dEband: -8.257503e-08  t[s]:      1.89
+BandDavidson: Iter:  36  Eband: +0.205632643424484  dEband: -5.906110e-08  t[s]:      1.90
+BandDavidson: Iter:  37  Eband: +0.205632600717257  dEband: -4.270723e-08  t[s]:      1.91
+BandDavidson: Iter:  38  Eband: +0.205632569751300  dEband: -3.096596e-08  t[s]:      1.91
+BandDavidson: Iter:  39  Eband: +0.205632547239153  dEband: -2.251215e-08  t[s]:      1.92
+BandDavidson: Iter:  40  Eband: +0.205632530864480  dEband: -1.637467e-08  t[s]:      1.93
+BandDavidson: Iter:  41  Eband: +0.205632518939013  dEband: -1.192547e-08  t[s]:      1.93
+BandDavidson: Iter:  42  Eband: +0.205632510254233  dEband: -8.684780e-09  t[s]:      1.94
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     1  [ +0.0000000 +0.0333333 +0.0333333 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.278146120696053
+BandDavidson: Iter:   1  Eband: +0.220515360668360  dEband: -5.763076e-02  t[s]:      1.96
+BandDavidson: Iter:   2  Eband: +0.210307191278326  dEband: -1.020817e-02  t[s]:      1.98
+BandDavidson: Iter:   3  Eband: +0.208803942826422  dEband: -1.503248e-03  t[s]:      1.99
+BandDavidson: Iter:   4  Eband: +0.208326268343819  dEband: -4.776745e-04  t[s]:      2.00
+BandDavidson: Iter:   5  Eband: +0.208214125167889  dEband: -1.121432e-04  t[s]:      2.02
+BandDavidson: Iter:   6  Eband: +0.208152017534317  dEband: -6.210763e-05  t[s]:      2.03
+BandDavidson: Iter:   7  Eband: +0.208122313029323  dEband: -2.970450e-05  t[s]:      2.05
+BandDavidson: Iter:   8  Eband: +0.208095746159110  dEband: -2.656687e-05  t[s]:      2.06
+BandDavidson: Iter:   9  Eband: +0.207545525867000  dEband: -5.502203e-04  t[s]:      2.08
+BandDavidson: Iter:  10  Eband: +0.205677892736253  dEband: -1.867633e-03  t[s]:      2.09
+BandDavidson: Iter:  11  Eband: +0.205484211292786  dEband: -1.936814e-04  t[s]:      2.11
+BandDavidson: Iter:  12  Eband: +0.205458055612218  dEband: -2.615568e-05  t[s]:      2.13
+BandDavidson: Iter:  13  Eband: +0.205450937635073  dEband: -7.117977e-06  t[s]:      2.14
+BandDavidson: Iter:  14  Eband: +0.205448435469665  dEband: -2.502165e-06  t[s]:      2.16
+BandDavidson: Iter:  15  Eband: +0.205447364226790  dEband: -1.071243e-06  t[s]:      2.17
+BandDavidson: Iter:  16  Eband: +0.205446859710212  dEband: -5.045166e-07  t[s]:      2.19
+BandDavidson: Iter:  17  Eband: +0.205446602690491  dEband: -2.570197e-07  t[s]:      2.20
+BandDavidson: Iter:  18  Eband: +0.205446467518414  dEband: -1.351721e-07  t[s]:      2.21
+BandDavidson: Iter:  19  Eband: +0.205446393604582  dEband: -7.391383e-08  t[s]:      2.23
+BandDavidson: Iter:  20  Eband: +0.205446353381452  dEband: -4.022313e-08  t[s]:      2.24
+BandDavidson: Iter:  21  Eband: +0.205446330029064  dEband: -2.335239e-08  t[s]:      2.25
+BandDavidson: Iter:  22  Eband: +0.205446316901930  dEband: -1.312713e-08  t[s]:      2.26
+BandDavidson: Iter:  23  Eband: +0.205446308951214  dEband: -7.950716e-09  t[s]:      2.27
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     2  [ +0.0000000 +0.0666667 +0.0666667 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.273646961516495
+BandDavidson: Iter:   1  Eband: +0.218168932576883  dEband: -5.547803e-02  t[s]:      2.30
+BandDavidson: Iter:   2  Eband: +0.207055383941982  dEband: -1.111355e-02  t[s]:      2.31
+BandDavidson: Iter:   3  Eband: +0.205570603279634  dEband: -1.484781e-03  t[s]:      2.33
+BandDavidson: Iter:   4  Eband: +0.205295737147226  dEband: -2.748661e-04  t[s]:      2.35
+BandDavidson: Iter:   5  Eband: +0.205205729695453  dEband: -9.000745e-05  t[s]:      2.36
+BandDavidson: Iter:   6  Eband: +0.205168857108205  dEband: -3.687259e-05  t[s]:      2.38
+BandDavidson: Iter:   7  Eband: +0.205151824332558  dEband: -1.703278e-05  t[s]:      2.39
+BandDavidson: Iter:   8  Eband: +0.205143638785246  dEband: -8.185547e-06  t[s]:      2.41
+BandDavidson: Iter:   9  Eband: +0.205139416055069  dEband: -4.222730e-06  t[s]:      2.42
+BandDavidson: Iter:  10  Eband: +0.205137209537739  dEband: -2.206517e-06  t[s]:      2.44
+BandDavidson: Iter:  11  Eband: +0.205135991910301  dEband: -1.217627e-06  t[s]:      2.45
+BandDavidson: Iter:  12  Eband: +0.205135319744406  dEband: -6.721659e-07  t[s]:      2.47
+BandDavidson: Iter:  13  Eband: +0.205134932128620  dEband: -3.876158e-07  t[s]:      2.48
+BandDavidson: Iter:  14  Eband: +0.205134710038544  dEband: -2.220901e-07  t[s]:      2.50
+BandDavidson: Iter:  15  Eband: +0.205134578510193  dEband: -1.315284e-07  t[s]:      2.51
+BandDavidson: Iter:  16  Eband: +0.205134501476539  dEband: -7.703365e-08  t[s]:      2.53
+BandDavidson: Iter:  17  Eband: +0.205134455411497  dEband: -4.606504e-08  t[s]:      2.54
+BandDavidson: Iter:  18  Eband: +0.205134428134994  dEband: -2.727650e-08  t[s]:      2.56
+BandDavidson: Iter:  19  Eband: +0.205134411595534  dEband: -1.653946e-08  t[s]:      2.57
+BandDavidson: Iter:  20  Eband: +0.205134401667586  dEband: -9.927948e-09  t[s]:      2.58
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     3  [ +0.0000000 +0.1000000 +0.1000000 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.265009964408848
+BandDavidson: Iter:   1  Eband: +0.215038038534831  dEband: -4.997193e-02  t[s]:      2.60
+BandDavidson: Iter:   2  Eband: +0.206287888924139  dEband: -8.750150e-03  t[s]:      2.62
+BandDavidson: Iter:   3  Eband: +0.205268446416514  dEband: -1.019443e-03  t[s]:      2.63
+BandDavidson: Iter:   4  Eband: +0.205057984757167  dEband: -2.104617e-04  t[s]:      2.65
+BandDavidson: Iter:   5  Eband: +0.204993357519277  dEband: -6.462724e-05  t[s]:      2.66
+BandDavidson: Iter:   6  Eband: +0.204970447799507  dEband: -2.290972e-05  t[s]:      2.68
+BandDavidson: Iter:   7  Eband: +0.204960291159531  dEband: -1.015664e-05  t[s]:      2.70
+BandDavidson: Iter:   8  Eband: +0.204955283636927  dEband: -5.007523e-06  t[s]:      2.71
+BandDavidson: Iter:   9  Eband: +0.204952614454957  dEband: -2.669182e-06  t[s]:      2.72
+BandDavidson: Iter:  10  Eband: +0.204951145651529  dEband: -1.468803e-06  t[s]:      2.74
+BandDavidson: Iter:  11  Eband: +0.204950295945041  dEband: -8.497065e-07  t[s]:      2.76
+BandDavidson: Iter:  12  Eband: +0.204949802628455  dEband: -4.933166e-07  t[s]:      2.77
+BandDavidson: Iter:  13  Eband: +0.204949504333333  dEband: -2.982951e-07  t[s]:      2.79
+BandDavidson: Iter:  14  Eband: +0.204949325459525  dEband: -1.788738e-07  t[s]:      2.81
+BandDavidson: Iter:  15  Eband: +0.204949215503669  dEband: -1.099559e-07  t[s]:      2.82
+BandDavidson: Iter:  16  Eband: +0.204949148396699  dEband: -6.710697e-08  t[s]:      2.83
+BandDavidson: Iter:  17  Eband: +0.204949107050135  dEband: -4.134656e-08  t[s]:      2.85
+BandDavidson: Iter:  18  Eband: +0.204949081756924  dEband: -2.529321e-08  t[s]:      2.86
+BandDavidson: Iter:  19  Eband: +0.204949065955160  dEband: -1.580176e-08  t[s]:      2.88
+BandDavidson: Iter:  20  Eband: +0.204949056139461  dEband: -9.815699e-09  t[s]:      2.89
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     4  [ +0.0000000 +0.1333333 +0.1333333 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.256230338527047
+BandDavidson: Iter:   1  Eband: +0.213005158113435  dEband: -4.322518e-02  t[s]:      2.92
+BandDavidson: Iter:   2  Eband: +0.206511085810805  dEband: -6.494072e-03  t[s]:      2.93
+BandDavidson: Iter:   3  Eband: +0.205432111372376  dEband: -1.078974e-03  t[s]:      2.95
+BandDavidson: Iter:   4  Eband: +0.205097432994851  dEband: -3.346784e-04  t[s]:      2.97
+BandDavidson: Iter:   5  Eband: +0.204997449016459  dEband: -9.998398e-05  t[s]:      2.98
+BandDavidson: Iter:   6  Eband: +0.204962642515785  dEband: -3.480650e-05  t[s]:      3.00
+BandDavidson: Iter:   7  Eband: +0.204949082051965  dEband: -1.356046e-05  t[s]:      3.02
+BandDavidson: Iter:   8  Eband: +0.204943421510357  dEband: -5.660542e-06  t[s]:      3.03
+BandDavidson: Iter:   9  Eband: +0.204940741173502  dEband: -2.680337e-06  t[s]:      3.05
+BandDavidson: Iter:  10  Eband: +0.204939457696029  dEband: -1.283477e-06  t[s]:      3.06
+BandDavidson: Iter:  11  Eband: +0.204938796457151  dEband: -6.612389e-07  t[s]:      3.08
+BandDavidson: Iter:  12  Eband: +0.204938448722860  dEband: -3.477343e-07  t[s]:      3.09
+BandDavidson: Iter:  13  Eband: +0.204938256937258  dEband: -1.917856e-07  t[s]:      3.10
+BandDavidson: Iter:  14  Eband: +0.204938152025445  dEband: -1.049118e-07  t[s]:      3.12
+BandDavidson: Iter:  15  Eband: +0.204938093030215  dEband: -5.899523e-08  t[s]:      3.13
+BandDavidson: Iter:  16  Eband: +0.204938059303552  dEband: -3.372666e-08  t[s]:      3.15
+BandDavidson: Iter:  17  Eband: +0.204938039991965  dEband: -1.931159e-08  t[s]:      3.16
+BandDavidson: Iter:  18  Eband: +0.204938028556079  dEband: -1.143589e-08  t[s]:      3.17
+BandDavidson: Iter:  19  Eband: +0.204938021641717  dEband: -6.914362e-09  t[s]:      3.19
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     5  [ +0.0000000 +0.1666667 +0.1666667 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.245606340661537
+BandDavidson: Iter:   1  Eband: +0.211717309148164  dEband: -3.388903e-02  t[s]:      3.21
+BandDavidson: Iter:   2  Eband: +0.206152735288113  dEband: -5.564574e-03  t[s]:      3.23
+BandDavidson: Iter:   3  Eband: +0.205520685255146  dEband: -6.320500e-04  t[s]:      3.24
+BandDavidson: Iter:   4  Eband: +0.205283845359374  dEband: -2.368399e-04  t[s]:      3.26
+BandDavidson: Iter:   5  Eband: +0.205178657791653  dEband: -1.051876e-04  t[s]:      3.28
+BandDavidson: Iter:   6  Eband: +0.205136067589676  dEband: -4.259020e-05  t[s]:      3.29
+BandDavidson: Iter:   7  Eband: +0.205116748746309  dEband: -1.931884e-05  t[s]:      3.31
+BandDavidson: Iter:   8  Eband: +0.205107403232216  dEband: -9.345514e-06  t[s]:      3.32
+BandDavidson: Iter:   9  Eband: +0.205102750723501  dEband: -4.652509e-06  t[s]:      3.34
+BandDavidson: Iter:  10  Eband: +0.205100378945227  dEband: -2.371778e-06  t[s]:      3.36
+BandDavidson: Iter:  11  Eband: +0.205099081985556  dEband: -1.296960e-06  t[s]:      3.38
+BandDavidson: Iter:  12  Eband: +0.205098410380116  dEband: -6.716054e-07  t[s]:      3.39
+BandDavidson: Iter:  13  Eband: +0.205098062341524  dEband: -3.480386e-07  t[s]:      3.41
+BandDavidson: Iter:  14  Eband: +0.205097866172057  dEband: -1.961695e-07  t[s]:      3.42
+BandDavidson: Iter:  15  Eband: +0.205097751334989  dEband: -1.148371e-07  t[s]:      3.44
+BandDavidson: Iter:  16  Eband: +0.205097682758087  dEband: -6.857690e-08  t[s]:      3.45
+BandDavidson: Iter:  17  Eband: +0.205097641285750  dEband: -4.147234e-08  t[s]:      3.47
+BandDavidson: Iter:  18  Eband: +0.205097615789230  dEband: -2.549652e-08  t[s]:      3.48
+BandDavidson: Iter:  19  Eband: +0.205097599930818  dEband: -1.585841e-08  t[s]:      3.49
+BandDavidson: Iter:  20  Eband: +0.205097590041972  dEband: -9.888845e-09  t[s]:      3.50
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     6  [ +0.0000000 +0.2000000 +0.2000000 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.235293335478823
+BandDavidson: Iter:   1  Eband: +0.210065487786834  dEband: -2.522785e-02  t[s]:      3.53
+BandDavidson: Iter:   2  Eband: +0.206900156372101  dEband: -3.165331e-03  t[s]:      3.55
+BandDavidson: Iter:   3  Eband: +0.206202338584235  dEband: -6.978178e-04  t[s]:      3.56
+BandDavidson: Iter:   4  Eband: +0.205835354697443  dEband: -3.669839e-04  t[s]:      3.58
+BandDavidson: Iter:   5  Eband: +0.205643009043641  dEband: -1.923457e-04  t[s]:      3.59
+BandDavidson: Iter:   6  Eband: +0.205540916689300  dEband: -1.020924e-04  t[s]:      3.61
+BandDavidson: Iter:   7  Eband: +0.205486383391211  dEband: -5.453330e-05  t[s]:      3.63
+BandDavidson: Iter:   8  Eband: +0.205460730457391  dEband: -2.565293e-05  t[s]:      3.64
+BandDavidson: Iter:   9  Eband: +0.205448417548704  dEband: -1.231291e-05  t[s]:      3.66
+BandDavidson: Iter:  10  Eband: +0.205443099514300  dEband: -5.318034e-06  t[s]:      3.67
+BandDavidson: Iter:  11  Eband: +0.205440608540565  dEband: -2.490974e-06  t[s]:      3.69
+BandDavidson: Iter:  12  Eband: +0.205439559033561  dEband: -1.049507e-06  t[s]:      3.71
+BandDavidson: Iter:  13  Eband: +0.205439091092997  dEband: -4.679406e-07  t[s]:      3.72
+BandDavidson: Iter:  14  Eband: +0.205438884184585  dEband: -2.069084e-07  t[s]:      3.74
+BandDavidson: Iter:  15  Eband: +0.205438793141271  dEband: -9.104331e-08  t[s]:      3.75
+BandDavidson: Iter:  16  Eband: +0.205438747810581  dEband: -4.533069e-08  t[s]:      3.77
+BandDavidson: Iter:  17  Eband: +0.205438725297420  dEband: -2.251316e-08  t[s]:      3.79
+BandDavidson: Iter:  18  Eband: +0.205438713246857  dEband: -1.205056e-08  t[s]:      3.80
+BandDavidson: Iter:  19  Eband: +0.205438706735274  dEband: -6.511583e-09  t[s]:      3.81
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     7  [ +0.0000000 +0.2333333 +0.2333333 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.225956452727745
+BandDavidson: Iter:   1  Eband: +0.208088214627194  dEband: -1.786824e-02  t[s]:      3.84
+BandDavidson: Iter:   2  Eband: +0.206223224387846  dEband: -1.864990e-03  t[s]:      3.85
+BandDavidson: Iter:   3  Eband: +0.205915341469498  dEband: -3.078829e-04  t[s]:      3.87
+BandDavidson: Iter:   4  Eband: +0.205653109076167  dEband: -2.622324e-04  t[s]:      3.89
+BandDavidson: Iter:   5  Eband: +0.205406866134556  dEband: -2.462429e-04  t[s]:      3.90
+BandDavidson: Iter:   6  Eband: +0.205245301694028  dEband: -1.615644e-04  t[s]:      3.92
+BandDavidson: Iter:   7  Eband: +0.205142342002973  dEband: -1.029597e-04  t[s]:      3.93
+BandDavidson: Iter:   8  Eband: +0.205083143542809  dEband: -5.919846e-05  t[s]:      3.95
+BandDavidson: Iter:   9  Eband: +0.205052143094608  dEband: -3.100045e-05  t[s]:      3.96
+BandDavidson: Iter:  10  Eband: +0.205032763651112  dEband: -1.937944e-05  t[s]:      3.98
+BandDavidson: Iter:  11  Eband: +0.205021003633064  dEband: -1.176002e-05  t[s]:      3.99
+BandDavidson: Iter:  12  Eband: +0.205013735837559  dEband: -7.267796e-06  t[s]:      4.01
+BandDavidson: Iter:  13  Eband: +0.205009890773180  dEband: -3.845064e-06  t[s]:      4.02
+BandDavidson: Iter:  14  Eband: +0.205007796350572  dEband: -2.094423e-06  t[s]:      4.03
+BandDavidson: Iter:  15  Eband: +0.205006590841973  dEband: -1.205509e-06  t[s]:      4.05
+BandDavidson: Iter:  16  Eband: +0.205005893144029  dEband: -6.976979e-07  t[s]:      4.06
+BandDavidson: Iter:  17  Eband: +0.205005466618528  dEband: -4.265255e-07  t[s]:      4.07
+BandDavidson: Iter:  18  Eband: +0.205005217044063  dEband: -2.495745e-07  t[s]:      4.08
+BandDavidson: Iter:  19  Eband: +0.205005070361545  dEband: -1.466825e-07  t[s]:      4.09
+BandDavidson: Iter:  20  Eband: +0.205004987976189  dEband: -8.238536e-08  t[s]:      4.10
+BandDavidson: Iter:  21  Eband: +0.205004937981422  dEband: -4.999477e-08  t[s]:      4.11
+BandDavidson: Iter:  22  Eband: +0.205004905146517  dEband: -3.283490e-08  t[s]:      4.12
+BandDavidson: Iter:  23  Eband: +0.205004882728648  dEband: -2.241787e-08  t[s]:      4.13
+BandDavidson: Iter:  24  Eband: +0.205004867762329  dEband: -1.496632e-08  t[s]:      4.14
+BandDavidson: Iter:  25  Eband: +0.205004857874236  dEband: -9.888094e-09  t[s]:      4.15
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     8  [ +0.0000000 +0.2666667 +0.2666667 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.218787409452593
+BandDavidson: Iter:   1  Eband: +0.206836210768435  dEband: -1.195120e-02  t[s]:      4.17
+BandDavidson: Iter:   2  Eband: +0.205643972719939  dEband: -1.192238e-03  t[s]:      4.19
+BandDavidson: Iter:   3  Eband: +0.205191338316263  dEband: -4.526344e-04  t[s]:      4.20
+BandDavidson: Iter:   4  Eband: +0.205003202797595  dEband: -1.881355e-04  t[s]:      4.21
+BandDavidson: Iter:   5  Eband: +0.204894103958120  dEband: -1.090988e-04  t[s]:      4.23
+BandDavidson: Iter:   6  Eband: +0.204776640960817  dEband: -1.174630e-04  t[s]:      4.25
+BandDavidson: Iter:   7  Eband: +0.204656000123574  dEband: -1.206408e-04  t[s]:      4.26
+BandDavidson: Iter:   8  Eband: +0.204438690182157  dEband: -2.173099e-04  t[s]:      4.28
+BandDavidson: Iter:   9  Eband: +0.204259077064642  dEband: -1.796131e-04  t[s]:      4.29
+BandDavidson: Iter:  10  Eband: +0.204130850693370  dEband: -1.282264e-04  t[s]:      4.31
+BandDavidson: Iter:  11  Eband: +0.204046682863367  dEband: -8.416783e-05  t[s]:      4.32
+BandDavidson: Iter:  12  Eband: +0.203979812271398  dEband: -6.687059e-05  t[s]:      4.34
+BandDavidson: Iter:  13  Eband: +0.203927366220902  dEband: -5.244605e-05  t[s]:      4.35
+BandDavidson: Iter:  14  Eband: +0.203883419854861  dEband: -4.394637e-05  t[s]:      4.37
+BandDavidson: Iter:  15  Eband: +0.203848122268748  dEband: -3.529759e-05  t[s]:      4.38
+BandDavidson: Iter:  16  Eband: +0.203820177794174  dEband: -2.794447e-05  t[s]:      4.40
+BandDavidson: Iter:  17  Eband: +0.203799246403534  dEband: -2.093139e-05  t[s]:      4.41
+BandDavidson: Iter:  18  Eband: +0.203784159024616  dEband: -1.508738e-05  t[s]:      4.42
+BandDavidson: Iter:  19  Eband: +0.203772644891744  dEband: -1.151413e-05  t[s]:      4.44
+BandDavidson: Iter:  20  Eband: +0.203764506113099  dEband: -8.138779e-06  t[s]:      4.45
+BandDavidson: Iter:  21  Eband: +0.203758740418328  dEband: -5.765695e-06  t[s]:      4.46
+BandDavidson: Iter:  22  Eband: +0.203754498375655  dEband: -4.242043e-06  t[s]:      4.47
+BandDavidson: Iter:  23  Eband: +0.203751326872862  dEband: -3.171503e-06  t[s]:      4.48
+BandDavidson: Iter:  24  Eband: +0.203748695599409  dEband: -2.631273e-06  t[s]:      4.49
+BandDavidson: Iter:  25  Eband: +0.203746926858936  dEband: -1.768740e-06  t[s]:      4.50
+BandDavidson: Iter:  26  Eband: +0.203745906174566  dEband: -1.020684e-06  t[s]:      4.51
+BandDavidson: Iter:  27  Eband: +0.203745128050283  dEband: -7.781243e-07  t[s]:      4.52
+BandDavidson: Iter:  28  Eband: +0.203744547659330  dEband: -5.803910e-07  t[s]:      4.53
+BandDavidson: Iter:  29  Eband: +0.203744072335134  dEband: -4.753242e-07  t[s]:      4.53
+BandDavidson: Iter:  30  Eband: +0.203743696737241  dEband: -3.755979e-07  t[s]:      4.54
+BandDavidson: Iter:  31  Eband: +0.203743399753268  dEband: -2.969840e-07  t[s]:      4.55
+BandDavidson: Iter:  32  Eband: +0.203743164830673  dEband: -2.349226e-07  t[s]:      4.56
+BandDavidson: Iter:  33  Eband: +0.203742974385297  dEband: -1.904454e-07  t[s]:      4.57
+BandDavidson: Iter:  34  Eband: +0.203742819990682  dEband: -1.543946e-07  t[s]:      4.57
+BandDavidson: Iter:  35  Eband: +0.203742698813495  dEband: -1.211772e-07  t[s]:      4.58
+BandDavidson: Iter:  36  Eband: +0.203742602535934  dEband: -9.627756e-08  t[s]:      4.59
+BandDavidson: Iter:  37  Eband: +0.203742526714255  dEband: -7.582168e-08  t[s]:      4.60
+BandDavidson: Iter:  38  Eband: +0.203742465335790  dEband: -6.137847e-08  t[s]:      4.61
+BandDavidson: Iter:  39  Eband: +0.203742416043378  dEband: -4.929241e-08  t[s]:      4.62
+BandDavidson: Iter:  40  Eband: +0.203742376161037  dEband: -3.988234e-08  t[s]:      4.62
+BandDavidson: Iter:  41  Eband: +0.203742344147081  dEband: -3.201396e-08  t[s]:      4.63
+BandDavidson: Iter:  42  Eband: +0.203742317956040  dEband: -2.619104e-08  t[s]:      4.64
+BandDavidson: Iter:  43  Eband: +0.203742296945826  dEband: -2.101021e-08  t[s]:      4.65
+BandDavidson: Iter:  44  Eband: +0.203742279927628  dEband: -1.701820e-08  t[s]:      4.65
+BandDavidson: Iter:  45  Eband: +0.203742266468724  dEband: -1.345890e-08  t[s]:      4.66
+BandDavidson: Iter:  46  Eband: +0.203742256037616  dEband: -1.043111e-08  t[s]:      4.67
+BandDavidson: Iter:  47  Eband: +0.203742248473478  dEband: -7.564138e-09  t[s]:      4.68
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     9  [ +0.0000000 +0.3000000 +0.3000000 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.212377281881910
+BandDavidson: Iter:   1  Eband: +0.203960474137239  dEband: -8.416808e-03  t[s]:      4.70
+BandDavidson: Iter:   2  Eband: +0.202945848758650  dEband: -1.014625e-03  t[s]:      4.71
+BandDavidson: Iter:   3  Eband: +0.202550641066729  dEband: -3.952077e-04  t[s]:      4.73
+BandDavidson: Iter:   4  Eband: +0.202368191463721  dEband: -1.824496e-04  t[s]:      4.74
+BandDavidson: Iter:   5  Eband: +0.202260332399913  dEband: -1.078591e-04  t[s]:      4.76
+BandDavidson: Iter:   6  Eband: +0.202176946396291  dEband: -8.338600e-05  t[s]:      4.77
+BandDavidson: Iter:   7  Eband: +0.202106417688025  dEband: -7.052871e-05  t[s]:      4.79
+BandDavidson: Iter:   8  Eband: +0.202045059387759  dEband: -6.135830e-05  t[s]:      4.80
+BandDavidson: Iter:   9  Eband: +0.202007925451360  dEband: -3.713394e-05  t[s]:      4.82
+BandDavidson: Iter:  10  Eband: +0.201984443424374  dEband: -2.348203e-05  t[s]:      4.83
+BandDavidson: Iter:  11  Eband: +0.201970100414565  dEband: -1.434301e-05  t[s]:      4.85
+BandDavidson: Iter:  12  Eband: +0.201960667748793  dEband: -9.432666e-06  t[s]:      4.86
+BandDavidson: Iter:  13  Eband: +0.201955162026457  dEband: -5.505722e-06  t[s]:      4.88
+BandDavidson: Iter:  14  Eband: +0.201951947035389  dEband: -3.214991e-06  t[s]:      4.89
+BandDavidson: Iter:  15  Eband: +0.201950017845950  dEband: -1.929189e-06  t[s]:      4.90
+BandDavidson: Iter:  16  Eband: +0.201949015483206  dEband: -1.002363e-06  t[s]:      4.92
+BandDavidson: Iter:  17  Eband: +0.201948451780662  dEband: -5.637025e-07  t[s]:      4.93
+BandDavidson: Iter:  18  Eband: +0.201948124736194  dEband: -3.270445e-07  t[s]:      4.95
+BandDavidson: Iter:  19  Eband: +0.201947912388448  dEband: -2.123477e-07  t[s]:      4.96
+BandDavidson: Iter:  20  Eband: +0.201947765816476  dEband: -1.465720e-07  t[s]:      4.97
+BandDavidson: Iter:  21  Eband: +0.201947665527006  dEband: -1.002895e-07  t[s]:      4.98
+BandDavidson: Iter:  22  Eband: +0.201947594519731  dEband: -7.100728e-08  t[s]:      4.99
+BandDavidson: Iter:  23  Eband: +0.201947544286617  dEband: -5.023311e-08  t[s]:      5.00
+BandDavidson: Iter:  24  Eband: +0.201947509384325  dEband: -3.490229e-08  t[s]:      5.01
+BandDavidson: Iter:  25  Eband: +0.201947485009470  dEband: -2.437485e-08  t[s]:      5.02
+BandDavidson: Iter:  26  Eband: +0.201947468614441  dEband: -1.639503e-08  t[s]:      5.03
+BandDavidson: Iter:  27  Eband: +0.201947456654410  dEband: -1.196003e-08  t[s]:      5.04
+BandDavidson: Iter:  28  Eband: +0.201947447526722  dEband: -9.127688e-09  t[s]:      5.05
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:    10  [ +0.0000000 +0.3333333 +0.3333333 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.207008598206182
+BandDavidson: Iter:   1  Eband: +0.200912920914087  dEband: -6.095677e-03  t[s]:      5.07
+BandDavidson: Iter:   2  Eband: +0.200100425355985  dEband: -8.124956e-04  t[s]:      5.09
+BandDavidson: Iter:   3  Eband: +0.199824328916366  dEband: -2.760964e-04  t[s]:      5.10
+BandDavidson: Iter:   4  Eband: +0.199710837249230  dEband: -1.134917e-04  t[s]:      5.12
+BandDavidson: Iter:   5  Eband: +0.199653699952978  dEband: -5.713730e-05  t[s]:      5.13
+BandDavidson: Iter:   6  Eband: +0.199622541433134  dEband: -3.115852e-05  t[s]:      5.15
+BandDavidson: Iter:   7  Eband: +0.199603748043940  dEband: -1.879339e-05  t[s]:      5.17
+BandDavidson: Iter:   8  Eband: +0.199593621621634  dEband: -1.012642e-05  t[s]:      5.18
+BandDavidson: Iter:   9  Eband: +0.199588397819979  dEband: -5.223802e-06  t[s]:      5.20
+BandDavidson: Iter:  10  Eband: +0.199585298663944  dEband: -3.099156e-06  t[s]:      5.22
+BandDavidson: Iter:  11  Eband: +0.199583762381812  dEband: -1.536282e-06  t[s]:      5.23
+BandDavidson: Iter:  12  Eband: +0.199582780306811  dEband: -9.820750e-07  t[s]:      5.25
+BandDavidson: Iter:  13  Eband: +0.199582226092144  dEband: -5.542147e-07  t[s]:      5.26
+BandDavidson: Iter:  14  Eband: +0.199581878232227  dEband: -3.478599e-07  t[s]:      5.28
+BandDavidson: Iter:  15  Eband: +0.199581656224923  dEband: -2.220073e-07  t[s]:      5.29
+BandDavidson: Iter:  16  Eband: +0.199581514095299  dEband: -1.421296e-07  t[s]:      5.31
+BandDavidson: Iter:  17  Eband: +0.199581418870465  dEband: -9.522483e-08  t[s]:      5.33
+BandDavidson: Iter:  18  Eband: +0.199581362669513  dEband: -5.620095e-08  t[s]:      5.34
+BandDavidson: Iter:  19  Eband: +0.199581329371321  dEband: -3.329819e-08  t[s]:      5.36
+BandDavidson: Iter:  20  Eband: +0.199581308602358  dEband: -2.076896e-08  t[s]:      5.37
+BandDavidson: Iter:  21  Eband: +0.199581295732051  dEband: -1.287031e-08  t[s]:      5.38
+BandDavidson: Iter:  22  Eband: +0.199581287423607  dEband: -8.308444e-09  t[s]:      5.39
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:    11  [ +0.0000000 +0.3666667 +0.3666667 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.203143961279365
+BandDavidson: Iter:   1  Eband: +0.198575986823704  dEband: -4.567974e-03  t[s]:      5.42
+BandDavidson: Iter:   2  Eband: +0.197937387433027  dEband: -6.385994e-04  t[s]:      5.43
+BandDavidson: Iter:   3  Eband: +0.197696849954503  dEband: -2.405375e-04  t[s]:      5.45
+BandDavidson: Iter:   4  Eband: +0.197572782666908  dEband: -1.240673e-04  t[s]:      5.46
+BandDavidson: Iter:   5  Eband: +0.197500163464567  dEband: -7.261920e-05  t[s]:      5.48
+BandDavidson: Iter:   6  Eband: +0.197459102812932  dEband: -4.106065e-05  t[s]:      5.49
+BandDavidson: Iter:   7  Eband: +0.197432065292443  dEband: -2.703752e-05  t[s]:      5.51
+BandDavidson: Iter:   8  Eband: +0.197420240241212  dEband: -1.182505e-05  t[s]:      5.52
+BandDavidson: Iter:   9  Eband: +0.197414769715857  dEband: -5.470525e-06  t[s]:      5.54
+BandDavidson: Iter:  10  Eband: +0.197411990566825  dEband: -2.779149e-06  t[s]:      5.56
+BandDavidson: Iter:  11  Eband: +0.197410626537023  dEband: -1.364030e-06  t[s]:      5.57
+BandDavidson: Iter:  12  Eband: +0.197409830479843  dEband: -7.960572e-07  t[s]:      5.59
+BandDavidson: Iter:  13  Eband: +0.197409371845369  dEband: -4.586345e-07  t[s]:      5.60
+BandDavidson: Iter:  14  Eband: +0.197409099118362  dEband: -2.727270e-07  t[s]:      5.62
+BandDavidson: Iter:  15  Eband: +0.197408933762104  dEband: -1.653563e-07  t[s]:      5.64
+BandDavidson: Iter:  16  Eband: +0.197408834399507  dEband: -9.936260e-08  t[s]:      5.65
+BandDavidson: Iter:  17  Eband: +0.197408774058898  dEband: -6.034061e-08  t[s]:      5.67
+BandDavidson: Iter:  18  Eband: +0.197408738566247  dEband: -3.549265e-08  t[s]:      5.69
+BandDavidson: Iter:  19  Eband: +0.197408718253463  dEband: -2.031278e-08  t[s]:      5.71
+BandDavidson: Iter:  20  Eband: +0.197408707124975  dEband: -1.112849e-08  t[s]:      5.72
+BandDavidson: Iter:  21  Eband: +0.197408700806429  dEband: -6.318546e-09  t[s]:      5.74
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:    12  [ +0.0000000 +0.4000000 +0.4000000 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.199947218529024
+BandDavidson: Iter:   1  Eband: +0.196484798655944  dEband: -3.462420e-03  t[s]:      5.76
+BandDavidson: Iter:   2  Eband: +0.195976389765841  dEband: -5.084089e-04  t[s]:      5.78
+BandDavidson: Iter:   3  Eband: +0.195802927940394  dEband: -1.734618e-04  t[s]:      5.80
+BandDavidson: Iter:   4  Eband: +0.195726054349368  dEband: -7.687359e-05  t[s]:      5.81
+BandDavidson: Iter:   5  Eband: +0.195686133735413  dEband: -3.992061e-05  t[s]:      5.83
+BandDavidson: Iter:   6  Eband: +0.195667485325655  dEband: -1.864841e-05  t[s]:      5.85
+BandDavidson: Iter:   7  Eband: +0.195657549901020  dEband: -9.935425e-06  t[s]:      5.86
+BandDavidson: Iter:   8  Eband: +0.195653472069699  dEband: -4.077831e-06  t[s]:      5.88
+BandDavidson: Iter:   9  Eband: +0.195651754931965  dEband: -1.717138e-06  t[s]:      5.90
+BandDavidson: Iter:  10  Eband: +0.195650822509053  dEband: -9.324229e-07  t[s]:      5.91
+BandDavidson: Iter:  11  Eband: +0.195650323674816  dEband: -4.988342e-07  t[s]:      5.93
+BandDavidson: Iter:  12  Eband: +0.195650064761695  dEband: -2.589131e-07  t[s]:      5.95
+BandDavidson: Iter:  13  Eband: +0.195649925899861  dEband: -1.388618e-07  t[s]:      5.96
+BandDavidson: Iter:  14  Eband: +0.195649854345451  dEband: -7.155441e-08  t[s]:      5.98
+BandDavidson: Iter:  15  Eband: +0.195649817144277  dEband: -3.720117e-08  t[s]:      6.00
+BandDavidson: Iter:  16  Eband: +0.195649798269631  dEband: -1.887465e-08  t[s]:      6.01
+BandDavidson: Iter:  17  Eband: +0.195649788612650  dEband: -9.656981e-09  t[s]:      6.03
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:    13  [ +0.0000000 +0.4333333 +0.4333333 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.198026358782081
+BandDavidson: Iter:   1  Eband: +0.194946564877509  dEband: -3.079794e-03  t[s]:      6.05
+BandDavidson: Iter:   2  Eband: +0.194573419259699  dEband: -3.731456e-04  t[s]:      6.07
+BandDavidson: Iter:   3  Eband: +0.194454285983622  dEband: -1.191333e-04  t[s]:      6.08
+BandDavidson: Iter:   4  Eband: +0.194400756403920  dEband: -5.352958e-05  t[s]:      6.10
+BandDavidson: Iter:   5  Eband: +0.194381894652507  dEband: -1.886175e-05  t[s]:      6.11
+BandDavidson: Iter:   6  Eband: +0.194373789210015  dEband: -8.105442e-06  t[s]:      6.13
+BandDavidson: Iter:   7  Eband: +0.194370428215555  dEband: -3.360994e-06  t[s]:      6.14
+BandDavidson: Iter:   8  Eband: +0.194368962148582  dEband: -1.466067e-06  t[s]:      6.16
+BandDavidson: Iter:   9  Eband: +0.194368256716780  dEband: -7.054318e-07  t[s]:      6.17
+BandDavidson: Iter:  10  Eband: +0.194367928418772  dEband: -3.282980e-07  t[s]:      6.19
+BandDavidson: Iter:  11  Eband: +0.194367750515442  dEband: -1.779033e-07  t[s]:      6.21
+BandDavidson: Iter:  12  Eband: +0.194367665527680  dEband: -8.498776e-08  t[s]:      6.22
+BandDavidson: Iter:  13  Eband: +0.194367623698148  dEband: -4.182953e-08  t[s]:      6.24
+BandDavidson: Iter:  14  Eband: +0.194367603830970  dEband: -1.986718e-08  t[s]:      6.26
+BandDavidson: Iter:  15  Eband: +0.194367593928242  dEband: -9.902729e-09  t[s]:      6.27
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:    14  [ +0.0000000 +0.4666667 +0.4666667 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.196840401979957
+BandDavidson: Iter:   1  Eband: +0.194027037581141  dEband: -2.813364e-03  t[s]:      6.29
+BandDavidson: Iter:   2  Eband: +0.193727561036144  dEband: -2.994765e-04  t[s]:      6.31
+BandDavidson: Iter:   3  Eband: +0.193643195226122  dEband: -8.436581e-05  t[s]:      6.32
+BandDavidson: Iter:   4  Eband: +0.193607111401728  dEband: -3.608382e-05  t[s]:      6.34
+BandDavidson: Iter:   5  Eband: +0.193596864554596  dEband: -1.024685e-05  t[s]:      6.35
+BandDavidson: Iter:   6  Eband: +0.193593271397634  dEband: -3.593157e-06  t[s]:      6.37
+BandDavidson: Iter:   7  Eband: +0.193591729920263  dEband: -1.541477e-06  t[s]:      6.38
+BandDavidson: Iter:   8  Eband: +0.193591052845096  dEband: -6.770752e-07  t[s]:      6.40
+BandDavidson: Iter:   9  Eband: +0.193590701027799  dEband: -3.518173e-07  t[s]:      6.41
+BandDavidson: Iter:  10  Eband: +0.193590528782900  dEband: -1.722449e-07  t[s]:      6.43
+BandDavidson: Iter:  11  Eband: +0.193590434042792  dEband: -9.474011e-08  t[s]:      6.44
+BandDavidson: Iter:  12  Eband: +0.193590385739781  dEband: -4.830301e-08  t[s]:      6.45
+BandDavidson: Iter:  13  Eband: +0.193590359430499  dEband: -2.630928e-08  t[s]:      6.47
+BandDavidson: Iter:  14  Eband: +0.193590345557440  dEband: -1.387306e-08  t[s]:      6.49
+BandDavidson: Iter:  15  Eband: +0.193590338195195  dEband: -7.362245e-09  t[s]:      6.50
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:    15  [ +0.0000000 +0.5000000 +0.5000000 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.196164146224877
+BandDavidson: Iter:   1  Eband: +0.193701079422386  dEband: -2.463067e-03  t[s]:      6.52
+BandDavidson: Iter:   2  Eband: +0.193432503626585  dEband: -2.685758e-04  t[s]:      6.54
+BandDavidson: Iter:   3  Eband: +0.193365134654381  dEband: -6.736897e-05  t[s]:      6.55
+BandDavidson: Iter:   4  Eband: +0.193342984031127  dEband: -2.215062e-05  t[s]:      6.56
+BandDavidson: Iter:   5  Eband: +0.193334999528265  dEband: -7.984503e-06  t[s]:      6.58
+BandDavidson: Iter:   6  Eband: +0.193331920804670  dEband: -3.078724e-06  t[s]:      6.59
+BandDavidson: Iter:   7  Eband: +0.193330741363125  dEband: -1.179442e-06  t[s]:      6.60
+BandDavidson: Iter:   8  Eband: +0.193330252352828  dEband: -4.890103e-07  t[s]:      6.62
+BandDavidson: Iter:   9  Eband: +0.193330072487406  dEband: -1.798654e-07  t[s]:      6.63
+BandDavidson: Iter:  10  Eband: +0.193329988786983  dEband: -8.370042e-08  t[s]:      6.64
+BandDavidson: Iter:  11  Eband: +0.193329954113236  dEband: -3.467375e-08  t[s]:      6.65
+BandDavidson: Iter:  12  Eband: +0.193329939471035  dEband: -1.464220e-08  t[s]:      6.66
+BandDavidson: Iter:  13  Eband: +0.193329932114584  dEband: -7.356451e-09  t[s]:      6.67
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:    16  [ +0.0312500 -0.4687500 +0.5000000 ]  0.014492754 ----
+BandDavidson: Iter:   0  Eband: +0.196177503666792
+BandDavidson: Iter:   1  Eband: +0.193627719096463  dEband: -2.549785e-03  t[s]:      6.69
+BandDavidson: Iter:   2  Eband: +0.193354447613953  dEband: -2.732715e-04  t[s]:      6.71
+BandDavidson: Iter:   3  Eband: +0.193280431622058  dEband: -7.401599e-05  t[s]:      6.72
+BandDavidson: Iter:   4  Eband: +0.193255790584746  dEband: -2.464104e-05  t[s]:      6.73
+BandDavidson: Iter:   5  Eband: +0.193247641822754  dEband: -8.148762e-06  t[s]:      6.74
+BandDavidson: Iter:   6  Eband: +0.193244715078300  dEband: -2.926744e-06  t[s]:      6.75
+BandDavidson: Iter:   7  Eband: +0.193243606993186  dEband: -1.108085e-06  t[s]:      6.76
+BandDavidson: Iter:   8  Eband: +0.193243090989174  dEband: -5.160040e-07  t[s]:      6.78
+BandDavidson: Iter:   9  Eband: +0.193242847353486  dEband: -2.436357e-07  t[s]:      6.79
+BandDavidson: Iter:  10  Eband: +0.193242740649364  dEband: -1.067041e-07  t[s]:      6.80
+BandDavidson: Iter:  11  Eband: +0.193242688810318  dEband: -5.183905e-08  t[s]:      6.81
+BandDavidson: Iter:  12  Eband: +0.193242664339878  dEband: -2.447044e-08  t[s]:      6.82
+BandDavidson: Iter:  13  Eband: +0.193242652370451  dEband: -1.196943e-08  t[s]:      6.83
+BandDavidson: Iter:  14  Eband: +0.193242646565491  dEband: -5.804960e-09  t[s]:      6.85
+BandDavidson: Converged (dEband<1.000000e-08)
+Setting wave functions to eigenvectors of Hamiltonian
+
+Dumping 'bandstruct-rel.eigenvals' ... done
+End date and time: Mon Mar  4 20:45:04 2019  (Duration: 0-0:00:06.91)
+Done!

@@ -1,0 +1,4 @@
+include common.in
+ionic-minimize nIterations 10   #Geometry optimization
+dump End State ElecDensity
+dump-name H2.$VAR

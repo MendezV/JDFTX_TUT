@@ -1,0 +1,6 @@
+#Save the following to common-rel.in:
+lattice face-centered Cubic 7.41
+ion-species Pt.rel-pbe-n-rrkjus_psl.0.1.UPF   #Different pseudopotential file
+elec-cutoff 20 200
+ion Pt  0 0 0  0
+spintype spin-orbit  

@@ -1,0 +1,5 @@
+#Save the following to common.in:
+lattice face-centered Cubic 7.41
+ion-species Pt.pbe-n-rrkjus_psl.0.1.UPF
+elec-cutoff 20 200    #Above UPF suggests higher charge-density cutoff than GBRV
+ion Pt  0 0 0  0
