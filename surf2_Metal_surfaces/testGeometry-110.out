@@ -1,7 +1,7 @@
 
 *************** JDFTx 1.4.2  ***************
 
-Start date and time: Mon Mar 11 10:29:13 2019
+Start date and time: Mon Mar 11 15:16:09 2019
 Executable jdftx with command-line: -ni testGeometry.in
 Running on hosts (process indices):  dhcp-ccc-9638.eduroam.cornell.edu (0)
 Divided in process groups (process indices):  0 (0)
@@ -212,5 +212,5 @@ This list may not be complete. Please suggest additional citations or
 report any other bugs at https://github.com/shankar1729/jdftx/issues
 
 Dry run successful: commands are valid and initialization succeeded.
-End date and time: Mon Mar 11 10:29:14 2019  (Duration: 0-0:00:00.77)
+End date and time: Mon Mar 11 15:16:09 2019  (Duration: 0-0:00:00.79)
 Done!
