@@ -1,0 +1,3 @@
+/var/spool/slurmd/job82719/slurm_script: line 5: mpirun: command not found
+/var/spool/slurmd/job82719/slurm_script: line 6: mpirun: command not found
+/var/spool/slurmd/job82719/slurm_script: line 7: gnuplot: command not found

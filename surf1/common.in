@@ -1,0 +1,9 @@
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+lattice Hexagonal 4.651 15           #Exact vertical dimension no longer matters
+
+ion C  0.000000  0.000000  0.0   0
+ion C  0.333333 -0.333333  0.0   0
+
+ion-species GBRV/$ID_pbe.uspp
+elec-cutoff 20 100
