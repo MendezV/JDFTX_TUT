@@ -1,0 +1,7 @@
+#Save the following to totalE.in:
+include common.in
+dump End ElecDensity State
+dump-name totalE.$VAR
+kpoint-folding 12 12 12     #Metals need more k-points
+elec-smearing Fermi 0.01  #Set fillings using Fermi function at T = 0.01 Hartrees
+electronic-SCF

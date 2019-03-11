@@ -1,0 +1,10 @@
+set aBy2 3.705   #a/2 in bohrs
+lattice \
+       0    ${aBy2} ${aBy2} \
+    ${aBy2}    0    ${aBy2} \
+    ${aBy2} ${aBy2}    0
+
+ion-species GBRV/$ID_pbesol.uspp
+elec-ex-corr gga-PBEsol
+elec-cutoff 20 100
+ion Pt  0 0 0  1      #Single atom per unit cell
