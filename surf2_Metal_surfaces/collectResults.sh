@@ -1,4 +1,7 @@
-tom
+#!/bin/bash
+
+Ebulk="-89.040956" #Bulk metal energy per atom
+
 
 function parseOutputs()
 {
